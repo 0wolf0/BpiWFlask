@@ -8,6 +8,7 @@ import json
 import urllib2
 import datetime
 
+
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 

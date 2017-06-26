@@ -1,0 +1,85 @@
+/*TEST*/
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.buttmeteo {
+    background-color: #7354FF;
+    border: 2px solid  #e7e7e7;
+    color: white;
+    padding: 10px 88px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
+.buttlogout {
+    background-color: #FF8197;
+    border: 2px solid  #e7e7e7;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
+.buttoff {
+    background-color: #f44336;
+    border: 2px solid  #555555; 
+    color: white;
+    padding: 15px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button {
+    background-color: #4CAF50;
+    border: 2px solid ##e7e7e7;
+    color: white;
+    padding: 15px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+body {
+    background: url('http://www.par.com/files/1813/6628/2242/par-systems-marine-background.jpg') no-repeat fixed center center;
+    background-size: cover;
+    font-family: Montserrat;
+}

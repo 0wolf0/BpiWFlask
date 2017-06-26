@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='meteo.css') }}">
+</head>
+<title>Temperature and humidity</title>
+<body>
+<div align="center">
+<h2>
+ </section>
+<p id="demo"></p>
+<script>
+	var dt = new Date();
+	document.getElementById("demo").innerHTML = dt.toLocaleString();
+</script>
+ </h2>
+
+      <table border = 2>
+        <table align="center"></table>
+	 {% for key, value in result.iteritems() %}
+	<h1>         
+            <tr>
+               <th><font size="12"> {{ key }} </th>
+               <td><font size="12"> {{ value }} </td>
+            </tr>
+         </h1>   
+      </table>
+	{%endfor%}
+	<a href="/lights"><button class="button" style="height:100px;width:200px;font-size:40px;">Back</button></a>      
+	<a href="/lines"><button class="button" style="height:100px;width:200px;font-size:40px;">Help</button></a>
+	<input type=button style="height:100px;width:200px;font-size:40px;" value="Refresh" onClick="window.location.reload()"> 
+	<meta http-equiv="refresh" content="25" >
+</body>
+</html>
+</div>

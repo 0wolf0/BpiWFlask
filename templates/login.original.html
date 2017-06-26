@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>LogIn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="margin-left: 49%" >Please login to continue</h3>
+      <br>
+      <form action="" method="post">
+        <input style="margin-left: 50%"  type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+       <br>
+	  <input style="margin-left: 50%"  type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+	<br>
+	<br>
+        <input style="margin-left: 53%"  class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong style="margin-left: 47%"></strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
+
