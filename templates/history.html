@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+	<center>
+	<h2>Temperature&Humidity history</h2>
         <meta charset="utf-8">
         <style>
+		<table align="center"> 
+		margin-left:auto; 
+		margin-right:auto;
             table {
                 border-collapse: collapse;
                 border: 2px black solid;
@@ -13,14 +18,16 @@
                 border: 1px black solid;
                 padding: 5px;
             }
-        </style>
+        </style> 
+		
     </head>
+	</center>
     <body>
         <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
-        <script src="d3.min.js?v=3.2.8"></script>
+        <script src="/static/d3min.js" href="{{ url_for('static', filename='d3min.js') }}""></script>
 
         <script type="text/javascript"charset="utf-8">
-            d3.text("output.csv", function(data) {
+            d3.text("/static/output.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
 
                 var container = d3.select("body")
@@ -36,6 +43,6 @@
                         .text(function(d) { return d; });
             });
         </script>
+		<a href="/meteo"><button class="button" style="height:25px;width:50px;font-size:15px;">Back</button></a>
     </body>
 </html>
-

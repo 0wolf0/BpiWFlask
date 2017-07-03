@@ -1,0 +1,38 @@
+import csv 
+import smbus 
+import time 
+import os
+import datetime
+DEVICE     = 0x5C #device address
+bus = smbus.SMBus(2)  # Rev 2 Pi uses 1
+
+
+#--------------------------------------------------------------------
+def readdata(addr=DEVICE):  
+  data = bus.read_i2c_block_data(addr,0x00, 5)
+  GetDateTime = datetime.datetime.now().strftime("%H:%M:%S")
+
+  print GetDateTime
+  print "Humidity = " + str(data[0]) + "." + str(data[1]) + "%"
+  print "Temperature : " + str(data[2]) + "." + str(data[3]) + "C"
+#--------------------------------------------------------------------
+def csv_writer(data, path):
+    """
+    Write data to a CSV file path
+    """
+    with open(path, "wb") as csv_file:
+
+        writer = csv.writer(csv_file, delimiter=',')
+        for line in data:
+            writer.writerow(line)
+#----------------------------------------------------------------------
+temp = str(data[2]) + "." + str(data[3]) + degree +"C" if __name__ == "__main__":
+   hum = str(data[0]) + "." + str(data[1]) + " %"
+
+    data = ["temperature,humidity,time".split(","),
+            "AA,AA,Strackeport".split(","),
+            "Dedric,Medhurst,Stiedemannberg".split(",")
+            ]
+    path = "output.csv"
+    csv_writer(data, path)
+    readdata()

@@ -1,6 +1,5 @@
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request, redirect, url_for, Markup
-import csv
 import os 
 import smbus
 import time
@@ -74,10 +73,6 @@ def logout():
 def index():
     rates = getExchangeRates()
     return render_template('exchange.html',**locals())   
-
-@app.route('/history')
-def history():
-    return render_template('history.html')
 
 
 
